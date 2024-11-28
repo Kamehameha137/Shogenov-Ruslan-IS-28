@@ -3,7 +3,7 @@
 # Найти значение выражения 1.1 - 1.2 + 1.3 - ... (N слагаемых,знаки чередуются). 
 # Условный оператор не использовать.
 
-def find_num(Number):
+def findNum(Number):
 
     result = 0 # переменная для сохраниения результата
 
@@ -18,7 +18,7 @@ def find_num(Number):
 while True:
     N = int(input("Введите значение N > 0: "))
     if N > 0:
-        find_num(N)
+        findNum(N)
         break
     else:
         print("Пожалуйста, введите число больше 0.")
