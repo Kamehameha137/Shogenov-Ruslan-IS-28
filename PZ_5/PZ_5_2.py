@@ -10,15 +10,23 @@ C = float(input("Trerie chislo "))
 D = float(input("Chetvertoe chislo "))
 
 def Minmax(X, Y):
-    maximum = max(A, B, C, D)
-    minimum = min(A, B, C, D)
+    maximum = max(X, Y)
+    minimum = min(X, Y)
 
     X = minimum
     Y = maximum
 
-    print("Минимум:", X)
-    print("Максимум:", Y)
 
     return X, Y
 
-Minmax()
+#сравниваю 2 пары, чтоб найти в каждой паре максимально и минимально
+min1, max1 = Minmax(A, B)  
+min2, max2 = Minmax(C, D)  
+
+#беру минимально число из каждой пары и записываю меньшее в finalMin. finalMax нужна, чтобы finalMin не хранила не нужное значение
+finalMin, finalMax = Minmax(min1, min2)
+#беру максимальное число из каждой пары и записываю наибольшее в finalMax
+finalMax = max(max1, max2)
+
+
+print(f"Min: {finalMin}, Max: {finalMax}")
