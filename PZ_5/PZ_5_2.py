@@ -4,6 +4,8 @@
 #Используя четыре вызова этой функции, найти минимальное и максимальное из
 #данных чисел A, B, C, D.
 
+# Вариант 30 Номер 2
+
 A = float(input("Pervoe chislo "))
 B = float(input("Vtoroe chislo "))
 C = float(input("Trerie chislo "))

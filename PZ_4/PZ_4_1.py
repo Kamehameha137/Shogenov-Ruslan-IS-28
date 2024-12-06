@@ -16,10 +16,14 @@ def findNum(Number):
     print(result)
 
 while True:
-    N = int(input("Введите значение N > 0: "))
-    if N > 0:
-        findNum(N)
-        break
-    else:
-        print("Пожалуйста, введите число больше 0.")
-        continue
+    try:
+        N = int(input("Введите значение N > 0: "))
+        if N > 0:
+            findNum(N)
+            break
+        else:
+            print("Пожалуйста, введите число больше 0.")
+            continue
+
+    except ValueError:
+        print("Пожалуйста, введите число")
