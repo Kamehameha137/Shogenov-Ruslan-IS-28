@@ -4,6 +4,5 @@
 
 stroka = input("Введите строку: ")
 words = stroka.split()
-min_len = min(len(word) for word in words)
 
-print()  # 1
+print(len(min(words)))
