@@ -3,7 +3,7 @@
 
 import re
 
-with open('price.txt', 'r', encoding='utf-8') as file:
+with open('/price.txt', 'r', encoding='utf-8') as file:
     content = file.read()
 
 prices = re.compile(r'(\d+)\s*руб\.?\s*(\d+)\s*коп\.?').findall(content)
