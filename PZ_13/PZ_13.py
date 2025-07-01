@@ -10,30 +10,24 @@ cols = 5
 
 list1 = [[random.randint(1, 100) for _ in range(cols)] for _ in range(rows)]
 
+list2 = [[0 if x % 2 != 0 else x for x in row] for row in list1]
+
+
+dynamic_array = [random.randint(1, 100) for _ in range(rows)]
+
+list3 = [[row[0], dynamic_array[i], *row[2:]] for i, row in enumerate(list1)]
+
+
 print("Исходный список:")
 for row in list1:
     print(row)
 
-def first(list_mod):
-    for i in range(len(list_mod)):
-        for j in range(len(list_mod[i])):  
-            if list_mod[i][j] % 2 != 0: 
-                list_mod[i][j] = 0
-    return list_mod
-
-dynamic_array = [random.randint(1, 100) for _ in range(rows)]
-print("\nДинамический массив для замены:", dynamic_array)
-
-def second(list_mod):
-    for i in range(len(list_mod)):
-        list_mod[i][1] = dynamic_array[i]
-    
-    return list_mod
-
 print("\nЗамена на 0:")
-for row in first(list1):
+for row in list2:
     print(row)
 
+print("\nДинамический массив для замены:", dynamic_array)
+
 print("\nЗамена значений на значения динамического массива:")
-for row in second(list1):
+for row in list3:
     print(row)
