@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 
 root = Tk()   
-root.title("PZ-17, Вариант 30")
+root.title("PZ-17, Номер 1, Вариант 30")
 root.geometry("626x612")  
 root["bg"] = "#ffadb2"
 
